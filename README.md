@@ -1,6 +1,16 @@
 # docker-shadowsocks-manyuser
 
-
+用法：
+docker run -dti --name=shadowsocks \
+-p 50000-60000:50000-60000 \
+-p 50000-60000:50000-60000/udp \
+-e manyuser=on \
+-e MYSQL_HOST=1.2.3.4 \
+-e MYSQL_PORT=3306 \
+-e MYSQL_USER=ShadowSocks \
+-e MYSQL_DBNAME=ShadowSocks \
+-e MYSQL_PASSWORD=147852369 \
+shadowsocksr_manyuser:latest
 
 |变量名      	|默认参数   	|说明   |
 | ------------- |:-------------:| :---|
